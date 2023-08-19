@@ -1,0 +1,16 @@
+{
+  "name": "edge-map-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "edge.js": "^6.0.0-6"
+  }
+}

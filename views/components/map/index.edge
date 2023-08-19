@@ -1,0 +1,14 @@
+@let(map = {
+  center,
+  zoom,
+  markers: [],
+})
+
+{{-- Inject state --}}
+@inject({ map })
+
+{{-- Evaluate slots --}}
+@eval(await $slots.main())
+
+{{-- Render the div and bind Alpine map component to it --}}
+<div x-data="map({{ js.stringify(map) }})" id="map"></div>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8' />
+  <title>Add custom markers in Mapbox GL JS</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+  <link href='/style.css' rel='stylesheet' />
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+  <script src="/app.js"></script>
+</head>
+<body>
+
+  @map({ center: [-84, 35], zoom: 3 })
+    @!map.marker({ lat: 37.8225, lon: -122.0024, label: 'Edge Body Shaping' })
+    @!map.marker({ lat: 33.8981, lon: -118.4169, label: 'Edge Barbershop & Essentials' })
+    @!map.marker({ lat: 29.723, lon: -95.4189, label: 'Edge Waxing Studio' })
+    @!map.marker({ lat: 28.3378, lon: -81.3966, label: 'Edge 30 Nutritional Consultants' })
+    @!map.marker({ lat: 40.6483, lon: -74.0237, label: 'Edge Brands LLC' })
+  @end
+
+</body>
+</html>

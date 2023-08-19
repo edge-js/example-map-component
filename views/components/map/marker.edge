@@ -1,0 +1,12 @@
+{{-- Ensure, we are child of the map component --}}
+@if(!$context.map)
+  @newError(
+    'The map.marker component should be nested within the map component',
+    $caller.filename,
+    $caller.line,
+    $caller.col
+  )
+@end
+
+{{-- Push a new marker --}}
+@eval($context.map.markers.push({ lat, lon, label }))
